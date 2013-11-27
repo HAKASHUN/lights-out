@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <title>puzzle</title>
+    <style>
+        td{
+            min-height: 80px;
+            min-width: 80px;
+            height: 80px;
+            width: 80px;
+            -webkit-border-radius: 16px;
+            -moz-border-radius: 16px;
+            border-radius: 16px;
+            background-color: #ccf;
+            -webkit-transition: 0.1s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Application container. -->
+<table id="main"></table>
+
+<!-- Application source. -->
+<script src="js/jquery.js"></script>
+<script src="js/app.js"></script>
+<script>
+    //Here We Go!
+    $(function(){
+        /** @type {number} 構成する色の数 */
+        var colors = 2;
+
+        /** @type {number} 辺の長さ */
+        var size = 3;
+
+        var puzzle = new Puzzle();
+        puzzle.setup(colors, size, size);
+
+    });
+</script>
+</body>
+</html>
